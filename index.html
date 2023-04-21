@@ -1,9 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<head>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-amber.min.css" />
+  <title>volume of a pyrmaid</title>
+</head>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">volume of a pyrmaid</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <h1>V= (L x W x H) /3</h1>
+      <img src="./images/Pyramid-Shape.jpg" alt="style" />
+      <form action="#">
+        <p>length</p>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length" step=".01" />
+          <label class="mdl-textfield__label" for="length">length</label>
+          <span class="mdl-textfield__error">Enter A Number</span>
+        </div>
+      </form>
+      <form action="#">
+        <p>width</p>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width" step=".01" />
+          <label class="mdl-textfield__label" for="width">width</label>
+          <span class="mdl-textfield__error">Enter A Number</span>
+        </div>
+      </form>
+      <form action="#">
+        <p>Height</p>
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height" step=".01" />
+          <label class="mdl-textfield__label" for="height">height</label>
+          <span class="mdl-textfield__error">Enter A Number</span>
+        </div>
+      </form>
+      <br />
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+        onclick="calculate()">
+        Calculate
+      </button>
+      <br />
+      <div id="volume"></div>
+    </main>
+  </div>
+</body>
 </html>
